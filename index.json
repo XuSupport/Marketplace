@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "nextjs-fullstack",
+      "type": "spec",
+      "name": "Next.js + oRPC + PostgreSQL (XuSupport baseline)",
+      "description": "Editable personal baseline derived from the official Trellis Next.js full-stack Spec template.",
+      "path": "specs/nextjs-fullstack",
+      "tags": [
+        "nextjs",
+        "react",
+        "typescript",
+        "orpc",
+        "drizzle",
+        "postgresql",
+        "xusupport"
+      ]
+    }
+  ]
+}
