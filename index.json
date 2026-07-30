@@ -16,6 +16,22 @@
         "postgresql",
         "xusupport"
       ]
+    },
+    {
+      "id": "deepagents-python",
+      "type": "spec",
+      "name": "Deep Agents Python SDK (XuSupport baseline)",
+      "description": "Reusable Python baseline for LangChain Deep Agents SDK projects, including graph assembly, middleware, permissions, persistence, and offline quality checks.",
+      "path": "specs/deepagents-python",
+      "tags": [
+        "python",
+        "deepagents",
+        "langchain",
+        "langgraph",
+        "uv",
+        "agent",
+        "xusupport"
+      ]
     }
   ]
 }

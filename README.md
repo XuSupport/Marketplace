@@ -1,6 +1,6 @@
 # XuSupport Trellis Marketplace
 
-这是个人 Trellis Spec 模板库。第一版以 Trellis 官方 Marketplace 的 `nextjs-fullstack` 为可编辑基线，适合以 Next.js、React、TypeScript、oRPC、Drizzle 和 PostgreSQL 构建的全栈项目。
+这是个人 Trellis Spec 模板库。目前提供两个可编辑基线：适合 Next.js 全栈应用的 nextjs-fullstack，以及适合 LangChain Deep Agents Python SDK 项目的 deepagents-python。
 
 ## 新项目使用
 
@@ -26,9 +26,19 @@ Spec 补齐后，请判断本轮工作是否应创建 Trellis task。若应创�
 
 在 Codex 0.129+ 中，请确认 `~/.codex/config.toml` 的 `[features]` 已启用 `hooks = true`，再在 TUI 运行一次 `/hooks` 并批准 Trellis 的 hook；这样 `/start`、`/continue` 与 `/finish-work` 等入口才会出现在命令菜单。
 
+### Deep Agents Python SDK
+
+用于以 Python、uv、LangChain 和 LangGraph 构建 Deep Agents SDK 项目：
+
+~~~bash
+trellis init -u <your-name> --codex --registry gh:XuSupport/Marketplace --template deepagents-python
+~~~
+
+该模板覆盖 Agent 图组装、工具与中间件、子代理、虚拟文件系统权限、持久化状态、公开 API 兼容性，以及离线单元测试和 ruff/ty 质量检查。项目特有的模型、后端、部署和业务工具规则应在初始化后的 .trellis/spec/ 中补充。
+
 ## 如何定制
 
-模板只是起点。项目唯一的架构决定、部署细节和业务规则，请保留在该项目的 `.trellis/spec/` 中。只有已经在多个项目被验证、且确实可复用的规则，才应通过审阅提交到本仓库的 `specs/nextjs-fullstack/`。
+模板只是起点。项目唯一的架构决定、部署细节和业务规则，请保留在该项目的 .trellis/spec/ 中。只有已经在多个项目被验证、且确实可复用的规则，才应通过审阅提交到本仓库对应的 specs/<template-id>/ 目录。
 
 例如，为项目加入 Redis、支付服务或特定的权限模型时，先在项目的 Spec 中说明；当这些约束成为你多数项目的长期选择时，再将通用部分提升到模板。
 
